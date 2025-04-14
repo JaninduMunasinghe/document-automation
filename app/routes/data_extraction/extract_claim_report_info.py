@@ -4,7 +4,7 @@ from app.services.data_extraction.extract_claim_report_service import process_ex
 
 extract_bp_claim_report = Blueprint('extract_bp_claim_report', __name__)
 
-@extract_bp_claim_report.route('/extract-claim-report', methods=['POST'])
+@extract_bp_claim_report.route('/extract-claim-report', methods=['POST']) # new comment
 def extract_info():
     if 'image' not in request.files:
         return jsonify({"error": "No image provided"}), 400
